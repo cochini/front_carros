@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs')  %>
+
+    <title>LISTAGEM DE MARCA</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs')  %>
+
+        <div class="card mt-2">
+            <div class="card-header">LISTAGEM DE MARCA</div>
+        </div>
+
+        <%
+            marcas.forEach(marca=>{
+        %>
+
+            <div class="card mt-2">
+
+                <div class="card-body">
+                    <%= marca.nome_marca %>
+                </div>
+
+                <a href="/formEdicaoMarcas/<%= marca.id_marca %>" class="btn btn-success mt-1">EDITAR</a>
+                <a href="/delete/<%= marca.id_marca %>" class="btn btn-danger mt-1">EXCLUIR</a>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+
+<%- include('../partials/footer.ejs')  %>

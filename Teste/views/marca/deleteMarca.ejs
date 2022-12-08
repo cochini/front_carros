@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs') %>
+
+    <title>DELETE DE MARCAS</title>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <%- include('../partials/menu.ejs') %>
+
+                <div class="card mt-2">
+                    <div class="card-header">DELETE DE MARCAS</div>
+                </div>
+
+                <div class="card-body">
+                    <form action="http://localhost:3001/deleteMarca" method="post">
+
+                        <label for="">MARCA</label>
+
+                        <input type="hidden" name="id_marca" id="id_marca" value="<%= marca.id_marca %>" />
+
+                        <input type="text" class="form-control" name="nome_marca" id="nome_marca"
+                            placeholder="DIGITE UMA MARCA" value="<%= marca.nome_marca %>">
+
+                        <button class="btn btn-danger mt-1">DELETAR</button>
+                    </form>
+                </div>
+        </div>
+
+    </body>
+
+    <%- include('../partials/footer.ejs') %>

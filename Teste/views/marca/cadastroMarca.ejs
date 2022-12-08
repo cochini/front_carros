@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>CADASTRO DE MARCA</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">CADASTRO DE MARCAS</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3001/inserirMarca" method="post">
+                
+                <label for="">MARCA</label>
+                <input type="text" class="form-control" 
+                        name="nome_marca" id="nome_marca"
+                        placeholder="DIGITE UMA MARCA">
+                
+                <button class="btn btn-success mt-2">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+ 
+    </body>
+
+<%- include('../partials/footer.ejs')  %>
